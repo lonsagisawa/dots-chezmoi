@@ -1,0 +1,47 @@
+# Ghostty configuration
+# For references:
+# ghostty +show-config --default --docs | less
+
+### Typography
+
+font-family = Monaspace Neon Frozen
+font-family = Noto Sans CJK JP
+
+# HACK: Unintended Japanese ligatures like 株式会社 workaround
+font-feature = -dlig
+
+font-size = 10
+
+# line-height
+# 100% = 200% of original
+adjust-cell-height = 40%
+adjust-cursor-height = 40%
+
+# make underline little bit lower
+adjust-underline-position = 3
+
+# Disable hinting for consistent Japanese rendering
+freetype-load-flags = no-hinting
+
+### Appearance
+
+theme = Catppuccin Mocha
+cursor-text = "#24273a"
+cursor-style = block
+
+window-padding-x = 8
+window-padding-y = 8
+window-padding-balance = true
+window-padding-color = extend
+
+# Titlebar/Headerbar color
+window-theme = ghostty
+
+### Behavior
+
+resize-overlay-duration = 250ms
+
+shell-integration-features = no-cursor,no-sudo,title
+
+gtk-single-instance = true
+quit-after-last-window-closed = false
