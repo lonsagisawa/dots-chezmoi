@@ -7,24 +7,6 @@ if status --is-interactive
     fenv source /etc/profile
 end
 
-switch (uname)
-    case Linux
-        # Deno
-        set -gx DENO_INSTALL $HOME/.deno
-        fish_add_path --path $DENO_INSTALL/bin
-    case Darwin
-        # macOS specific configuration
-
-        # Homebrew
-        fish_add_path --path /opt/homebrew/bin
-        fish_add_path --path /opt/homebrew/sbin
-
-        # miniforge
-        if test -f /opt/homebrew/Caskroom/miniforge/base/bin/conda
-            status is-interactive && eval /opt/homebrew/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source
-        end
-end
-
 set fish_greeting
 
 # catppuccin theme
@@ -56,13 +38,34 @@ set -x FZF_DEFAULT_OPTS "\
 --multi"
 
 # aliases
-alias g="git"
-alias gs="git status"
-alias gd="git diff"
-alias ga="git add"
-alias gc="git commit"
-alias gp="git push"
-alias lg="lazygit"
+abbr g "git"
+abbr gs "git status"
+abbr gd "git diff"
+abbr ga "git add"
+abbr gc "git commit"
+abbr gp "git push"
+abbr lg "lazygit"
 
-alias ls="eza -l"
-alias la="eza -la"
+abbr ls "eza -l"
+abbr la "eza -la"
+
+abbr tree "eza -iT --no-user"
+
+switch (uname)
+    case Darwin
+        # macOS specific configuration
+
+        # Homebrew
+        fish_add_path -m -p --path /opt/homebrew/bin
+        fish_add_path -m -p --path /opt/homebrew/sbin
+
+        # miniforge
+        if test -f /opt/homebrew/Caskroom/miniforge/base/bin/conda
+            status is-interactive && eval /opt/homebrew/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source
+        end
+
+        # orbstack
+        if test -f ~/.orbstack/shell/init2.fish
+            source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+        end
+end
