@@ -21,8 +21,6 @@ window#waybar > box {
     background: @surface_container;
     background-color: @surface_container;
     color: @primary;
-    border-radius: 22px;
-    margin: 4px;
     padding: 2px 4px;
 }
 
@@ -35,11 +33,15 @@ window#waybar > box {
     border-radius: 22px;
 }
 
+.modules-center {
+    margin: 2px 0px;
+}
+
 #workspaces {
     background-color: @surface_container_high;
     border-radius: 22px;
     margin: 0px;
-    padding: 1px;
+    padding: 0px;
 }
 
 #workspaces button {
