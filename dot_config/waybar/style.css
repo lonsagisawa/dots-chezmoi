@@ -1,0 +1,64 @@
+@import "colors.css";
+
+* {
+    font-family: "Adwaita Sans", sans-serif, 'Symbols Nerd Fonts';
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 22px;
+}
+
+window#waybar {
+    background: transparent;
+    background-color: transparent;
+    color: transparent;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+    margin: 0;
+    border-radius: 0px
+}
+
+window#waybar > box {
+    background: @surface_container;
+    background-color: @surface_container;
+    color: @primary;
+    border-radius: 22px;
+    margin: 4px;
+    padding: 2px 4px;
+}
+
+.modules-right,
+/* .modules-center, */
+.modules-left {
+    background-color: @surface_container_high;
+    margin: 2px 0px;
+    padding: 0px 16px;
+    border-radius: 22px;
+}
+
+#workspaces {
+    background-color: @surface_container_high;
+    border-radius: 22px;
+    margin: 0px;
+    padding: 1px;
+}
+
+#workspaces button {
+    color: @primary;
+    padding: 0px 8px;
+    border: 0px;
+    border-radius: 22px;
+    margin: 0 2px;
+}
+
+#workspaces button:hover,
+#workspaces button.focused,
+#workspaces button.focused:hover {
+    background-color: @primary;
+    color: @surface_container;
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#custom-swaync {
+    padding: 0px 8px;
+}
