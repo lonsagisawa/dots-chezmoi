@@ -3,4 +3,5 @@ README.md
 {{- if ne .chezmoi.os "linux" }}
 # Linux環境専用のファイル
 .config/fontconfig/fonts.conf
+.config/waybar
 {{ end }}
