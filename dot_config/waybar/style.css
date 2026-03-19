@@ -2,9 +2,9 @@
 
 * {
     font-family: "Adwaita Sans", sans-serif, 'Symbols Nerd Fonts';
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
-    min-height: 22px;
+    min-height: 28px;
 }
 
 window#waybar {
@@ -14,42 +14,47 @@ window#waybar {
     transition-property: background-color;
     transition-duration: 0.1s;
     margin: 0;
-    border-radius: 0px
+    border-radius: 0px;
 }
 
 window#waybar > box {
     background: @surface_container;
     background-color: @surface_container;
     color: @primary;
-    padding: 2px 4px;
+    padding: 4px 0px;
+    margin: 4px 12px 0px;
+    border-radius: 20px;
 }
 
 .modules-right,
 /* .modules-center, */
 .modules-left {
-    background-color: @surface_container_high;
-    margin: 2px 0px;
-    padding: 0px 16px;
-    border-radius: 22px;
-}
-
-.modules-center {
-    margin: 2px 0px;
+    /* background-color: @surface_container_high; */
+    margin: 0px;
+    padding: 0px 2px;
+    border-radius: 20px;
 }
 
 #workspaces {
     background-color: @surface_container_high;
-    border-radius: 22px;
-    margin: 0px;
+    border-radius: 10px;
     padding: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 #workspaces button {
     color: @primary;
-    padding: 0px 8px;
+    padding: 0px;
+    min-width: 32px;
     border: 0px;
-    border-radius: 22px;
-    margin: 0 2px;
+    border-radius: 20px;
+    margin: 0px 2px;
+}
+
+#workspaces button.focused,
+#workspaces button.focused:hover {
+    min-width: 48px;
 }
 
 #workspaces button:hover,
@@ -61,6 +66,46 @@ window#waybar > box {
     text-shadow: inherit;
 }
 
+#power-profiles-daemon {
+    margin-left: 12px;
+}
+
+#power-profiles-daemon.performance {
+    color: @error;
+}
+
+#power-profiles-daemon.power-saver {
+    color: @secondary;
+}
+
+#battery {
+    margin-left: 16px;
+}
+
 #custom-swaync {
-    padding: 0px 8px;
+    padding: 0px 16px;
+}
+
+#clock {
+    margin-right: 12px;
+}
+
+#network {
+    margin-left: 16px;
+}
+
+#network.disconnected {
+    color: @error;
+}
+
+#pulseaudio {
+    margin-left: 16px;
+}
+
+#pulseaudio.muted {
+    color: @secondary;
+}
+
+#backlight {
+    margin-left: 16px;
 }

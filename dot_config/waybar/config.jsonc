@@ -4,22 +4,50 @@
     "reload_style_on_change": true,
 
     // Modules
-    "modules-left": ["sway/window"],
-    "modules-center": ["sway/workspaces"],
-    "modules-right": ["tray", "battery", "custom/swaync", "clock"],
+    "modules-left": ["niri/workspaces"],
+    "modules-center": [],
+    "modules-right": ["tray", "power-profiles-daemon", "pulseaudio", "network", "battery", "custom/swaync", "clock"],
 
     // Module configuration
-    "sway/window": {
+    "niri/window": {
         "max-length": 26
-    },
-
-    "sway/workspaces": {
-        "format": "{name}"
     },
 
     "tray": {
         "spacing": 8,
-        "icon-size": 16
+        "icon-size": 18
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "{icon}",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"],
+            "default-muted": "󰖁",
+        }
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+
+    "network": {
+        "format": "󰤨",
+        "format-wifi": "󰤨",
+        "format-ethernet": "󰌗",
+        "format-disconnected": "󰤭",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format-wifi": "󰤨 {essid} {signalStrength}%",
+        "tooltip-format-ethernet": "{ifname} 󰌗",
+        "tooltip-format-disconnected": "Disconnected",
     },
 
     "clock": {
@@ -27,8 +55,12 @@
     },
 
     "battery": {
-        "format": "{icon} {capacity}%",
-        "format-icons": ["", "", "", "", ""]
+        "format": "{icon}",
+        "tooltip-format": "{capacity}% ({time})",
+        "format-icons": {
+            "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+            "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+        }
     },
 
     "custom/swaync": {
