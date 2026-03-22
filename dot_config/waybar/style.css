@@ -22,8 +22,8 @@ window#waybar > box {
     background-color: @surface_container;
     color: @primary;
     padding: 4px 0px;
-    margin: 4px 12px 0px;
-    border-radius: 20px;
+    margin: 0px 20px 0px;
+    border-radius: 0px 0px 18px 18px;
 }
 
 .modules-right,
@@ -91,6 +91,10 @@ window#waybar > box {
 }
 
 #network {
+    margin-left: 16px;
+}
+
+#bluetooth {
     margin-left: 16px;
 }
 

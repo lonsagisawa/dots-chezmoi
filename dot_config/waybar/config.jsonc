@@ -6,7 +6,7 @@
     // Modules
     "modules-left": ["niri/workspaces"],
     "modules-center": [],
-    "modules-right": ["tray", "power-profiles-daemon", "pulseaudio", "network", "battery", "custom/swaync", "clock"],
+    "modules-right": ["tray", "power-profiles-daemon", "bluetooth", "pulseaudio", "network", "battery", "custom/swaync", "clock"],
 
     // Module configuration
     "niri/window": {
@@ -14,8 +14,21 @@
     },
 
     "tray": {
-        "spacing": 8,
+        "spacing": 12,
         "icon-size": 18
+    },
+
+    "bluetooth": {
+        "format": " {status}",
+        "format-disabled": "󰂲",
+        "format-off": "󰂲",
+        "format-on": "",
+        "format-connected": "󰂱",
+        "format-connected-battery": "󰂱 {device_battery_percentage}%",
+        "tooltip-format": "{controller_alias}\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias} {device_address}",
+        "on-click": "bzmenu --launcher fuzzel"
     },
 
     "pulseaudio": {
