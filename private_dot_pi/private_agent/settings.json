@@ -1,0 +1,6 @@
+{
+  "lastChangelogVersion": "0.65.2",
+  "defaultProvider": "zai-coding-plan",
+  "defaultModel": "glm-5.1",
+  "theme": "catppuccin-mocha"
+}
