@@ -1,0 +1,94 @@
+/* Matugenで生成されたカラーパレットを読み込む */
+@import 'colors.css';
+
+/* --- 全体のベース設定 --- */
+* {
+  font-family: "Adwaita Sans", "Noto Sans CJK JP", "sans-serif";
+  font-size: 14px;
+}
+
+/* --- コントロールセンター (右側のパネル) --- */
+.control-center {
+  background-color: @surface;
+  color: @on_surface;
+  border-radius: 12px;
+  border: 1px solid @outline_variant;
+  padding: 12px;
+}
+
+/* --- 通知ポップアップ (単体の通知) --- */
+.notification {
+  background-color: @surface_container_low;
+  color: @on_surface;
+  border-radius: 12px;
+  border: 1px solid @outline_variant;
+  margin: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 緊急度（Critical）の高い通知 */
+.notification.critical {
+  background-color: @error_container;
+  color: @on_error_container;
+  border: 1px solid @error;
+}
+
+/* --- ウィジェット: タイトルと「すべて消去」ボタン --- */
+.widget-title {
+  color: @primary;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.widget-title>button {
+  background-color: @secondary_container;
+  color: @on_secondary_container;
+  border-radius: 8px;
+  border: none;
+  padding: 4px 12px;
+}
+
+.widget-title>button:hover {
+  background-color: @primary;
+  color: @on_primary;
+}
+
+/* --- ウィジェット: Do Not Disturb (DND) --- */
+.widget-dnd {
+  background-color: @surface_container_high;
+  color: @on_surface;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.widget-dnd>switch {
+  background-color: @surface_variant;
+  border-radius: 12px;
+}
+
+.widget-dnd>switch:checked {
+  background-color: @primary;
+}
+
+/* --- ウィジェット: MPRIS (メディアプレイヤー) --- */
+.widget-mpris {
+  background-color: @surface_container;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  padding: 0px;
+}
+
+.widget-mpris-player {
+  padding: 0px;
+}
+
+.widget-mpris-title {
+  font-weight: bold;
+  color: @on_surface;
+}
+
+.widget-mpris-subtitle {
+  color: @on_surface_variant;
+}
