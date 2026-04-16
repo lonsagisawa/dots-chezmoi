@@ -4,4 +4,8 @@ README.md
 # Linux環境専用のファイル
 .config/fontconfig/fonts.conf
 .config/waybar
+.config/environment.d
+.config/matugen
+.config/niri
+.config/swaync
 {{ end }}
