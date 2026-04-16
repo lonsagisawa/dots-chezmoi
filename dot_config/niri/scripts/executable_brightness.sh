@@ -1,20 +1,27 @@
 #!/bin/bash
 
-# 引数に応じて輝度を変更 (例: up, down)
+# 引数に応じて輝度を変更
 if [ "$1" == "up" ]; then
     brightnessctl set 5%+
 elif [ "$1" == "down" ]; then
     brightnessctl set 5%-
 fi
 
-# 変更後の輝度のパーセンテージを取得 (例: "50%" -> "50")
-# brightnessctl -m はカンマ区切りのデータを出力し、4番目がパーセンテージです
+# 変更後の輝度のパーセンテージを取得
 current=$(brightnessctl -m | cut -d, -f4 | tr -d '%')
 
-# swaync (notify-send) に通知を送信
-# -h int:value:$current : プログレスバーを表示する
-# -h string:x-canonical-private-synchronous:brightness : 同じタグの通知を上書きする
+# 輝度レベルに応じてアイコンを変更
+if [ "$current" -ge 67 ]; then
+    icon="display-brightness-high"
+elif [ "$current" -ge 34 ]; then
+    icon="display-brightness-medium"
+else
+    icon="display-brightness-low"
+fi
+
+# notify-sendに -i オプションでアイコンを渡す
 notify-send -a "Display" \
+            -i "$icon" \
             -h string:x-canonical-private-synchronous:brightness \
             -h int:value:"$current" \
             "Brightness" "${current}%"

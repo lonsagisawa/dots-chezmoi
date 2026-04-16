@@ -6,7 +6,7 @@
     // Modules
     "modules-left": ["niri/workspaces"],
     "modules-center": [],
-    "modules-right": ["tray", "power-profiles-daemon", "bluetooth", "pulseaudio", "network", "battery", "custom/swaync", "clock"],
+    "modules-right": ["tray", "power-profiles-daemon", "bluetooth", "pulseaudio", "network", "battery", "clock", "custom/swaync"],
 
     // Module configuration
     "niri/window": {

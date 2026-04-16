@@ -140,14 +140,17 @@ binds {
     // For example, this is a standard bind to toggle the screen reader (orca).
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
-    // Example volume keys mappings for PipeWire & WirePlumber.
-    // The allow-when-locked=true property makes them work even when the session is locked.
-    // Using spawn-sh allows to pass multiple arguments together with the command.
-    // "-l 1.0" limits the volume to 100%.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    // 音量アップ
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "~/.config/niri/scripts/volume.sh" "up"; }
+
+    // 音量ダウン
+    XF86AudioLowerVolume allow-when-locked=true { spawn "~/.config/niri/scripts/volume.sh" "down"; }
+
+    // ミュート切り替え
+    XF86AudioMute allow-when-locked=true { spawn "~/.config/niri/scripts/volume.sh" "mute"; }
+
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+
 
     // Example media keys mapping using playerctl.
     // This will work with any MPRIS-enabled media player.
