@@ -4,8 +4,10 @@
   "defaultModel": "gpt-5.4",
   "theme": "catppuccin-mocha",
   "packages": [
-    "npm:pi-mcp-adapter"
+    "npm:pi-mcp-adapter",
+    "npm:pi-powerline-footer",
+    "npm:@ifi/oh-pi-themes"
   ],
-  "hideThinkingBlock": false,
+  "hideThinkingBlock": true,
   "defaultThinkingLevel": "medium"
 }
