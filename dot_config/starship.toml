@@ -20,7 +20,7 @@ style = 'sky'
 repo_root_style = 'sky bold'
 
 [docker_context]
-format = '[$symbol$context]($style)'
+format = '[$symbol$context]($style) '
 symbol = '󰡨 '
 style = 'sapphire bold'
 
