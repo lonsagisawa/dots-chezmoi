@@ -4,15 +4,16 @@
 
 ### Typography
 
-font-family = Monaspace Neon Frozen
+font-family = Maple Mono
 font-family = BIZ UDGothic
 font-family = Noto Sans CJK JP
 
-# HACK: Unintended Japanese ligatures like 株式会社 workaround
-font-feature = -dlig
-
 {{ if eq .chezmoi.os "darwin" }}
+{{ if contains "-" .chezmoi.hostname }}
 font-size = 11
+{{ else }}
+font-size = 13
+{{ end }}
 font-thicken = true
 {{ else }}
 font-size = 10
