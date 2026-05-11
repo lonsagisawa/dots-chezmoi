@@ -4,9 +4,13 @@
 
 ### Typography
 
-font-family = Maple Mono
+font-family = CommitMono
 font-family = BIZ UDGothic
 font-family = Noto Sans CJK JP
+
+font-feature = ss01
+font-feature = ss02
+font-feature = cv08
 
 {{ if eq .chezmoi.os "darwin" }}
 {{ if contains "-" .chezmoi.hostname }}
@@ -25,7 +29,7 @@ adjust-cell-height = 40%
 adjust-cursor-height = 40%
 
 # make underline little bit lower
-adjust-underline-position = 3
+adjust-underline-position = 2
 
 # Disable hinting for consistent Japanese rendering
 freetype-load-flags = no-hinting
