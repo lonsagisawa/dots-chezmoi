@@ -10,6 +10,10 @@ success_symbol = "[❯](green)"
 error_symbol = "[❯](peach)"
 vimcmd_symbol = "[❮](subtext1)" # For use with zsh-vi-mode
 
+[cmake]
+format = '[$symbol($version )]($style)'
+symbol = ' '
+
 [deno]
 format = '[$symbol($version )]($style)'
 symbol = ' '
