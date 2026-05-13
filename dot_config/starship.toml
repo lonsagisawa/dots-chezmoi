@@ -37,6 +37,11 @@ format = '[$symbol($version )]($style)'
 symbol = '󰟓 '
 style = 'sapphire bold'
 
+[hostname]
+format = '[$ssh_symbol$hostname]($style) '
+ssh_symbol = ' '
+style = 'bold green'
+
 [lua]
 format = '[$symbol($version )]($style)'
 symbol = '󰢱 '
