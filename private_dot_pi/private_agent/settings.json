@@ -1,12 +1,14 @@
 {
-  "lastChangelogVersion": "0.70.2",
+  "lastChangelogVersion": "0.74.0",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.4",
   "theme": "catppuccin-mocha",
   "packages": [
     "npm:pi-mcp-adapter",
     "npm:pi-powerline-footer",
-    "npm:@ifi/oh-pi-themes"
+    "npm:@ifi/oh-pi-themes",
+    "npm:@aliou/pi-guardrails",
+    "npm:pi-secret-guard"
   ],
   "hideThinkingBlock": true,
   "defaultThinkingLevel": "medium"
