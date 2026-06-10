@@ -1,16 +1,24 @@
 {
-  "lastChangelogVersion": "0.75.5",
+  "lastChangelogVersion": "0.79.1",
   "defaultProvider": "opencode-go",
-  "defaultModel": "qwen3.6-plus",
+  "defaultModel": "deepseek-v4-flash",
   "theme": "catppuccin-mocha",
   "packages": [
     "npm:pi-mcp-adapter",
-    "npm:pi-powerline-footer",
     "npm:@ifi/oh-pi-themes",
     "npm:@aliou/pi-guardrails",
     "npm:pi-secret-guard",
-    "npm:@narumitw/pi-firecrawl"
+    "npm:@narumitw/pi-firecrawl",
+    "npm:pi-extmgr",
+    "npm:pi-powerline-footer",
+    "npm:pi-subagents"
   ],
-  "hideThinkingBlock": true,
-  "defaultThinkingLevel": "medium"
+  "hideThinkingBlock": false,
+  "defaultThinkingLevel": "high",
+  "workingVibeModel": "opencode-go/deepseek-v4-flash",
+  "workingVibeMode": "file",
+  "workingVibe": "kawaii",
+  "degoog": {
+    "url": "https://degoog.175622.xyz"
+  }
 }
