@@ -1,7 +1,7 @@
 {
-  "lastChangelogVersion": "0.79.1",
-  "defaultProvider": "opencode-go",
-  "defaultModel": "deepseek-v4-flash",
+  "lastChangelogVersion": "0.80.3",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.5",
   "theme": "catppuccin-mocha",
   "packages": [
     "npm:pi-mcp-adapter",
@@ -11,10 +11,12 @@
     "npm:@narumitw/pi-firecrawl",
     "npm:pi-extmgr",
     "npm:pi-powerline-footer",
-    "npm:pi-subagents"
+    "npm:pi-subagents",
+    "npm:pi-intercom",
+    "npm:pi-prompt-template-model"
   ],
   "hideThinkingBlock": false,
-  "defaultThinkingLevel": "high",
+  "defaultThinkingLevel": "medium",
   "workingVibeModel": "opencode-go/deepseek-v4-flash",
   "workingVibeMode": "file",
   "workingVibe": "kawaii",
