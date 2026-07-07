@@ -2,25 +2,21 @@
   "lastChangelogVersion": "0.80.3",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.5",
-  "theme": "catppuccin-mocha",
+  "theme": "rose-pine",
   "packages": [
     "npm:pi-mcp-adapter",
-    "npm:@ifi/oh-pi-themes",
     "npm:@aliou/pi-guardrails",
     "npm:pi-secret-guard",
     "npm:@narumitw/pi-firecrawl",
     "npm:pi-extmgr",
-    "npm:pi-powerline-footer",
-    "npm:pi-subagents",
-    "npm:pi-intercom",
-    "npm:pi-prompt-template-model"
+    "npm:pi-working-vibe"
   ],
   "hideThinkingBlock": false,
   "defaultThinkingLevel": "medium",
-  "workingVibeModel": "opencode-go/deepseek-v4-flash",
-  "workingVibeMode": "file",
-  "workingVibe": "kawaii",
   "degoog": {
     "url": "https://degoog.175622.xyz"
-  }
+  },
+  "workingVibe": true,
+  "workingIndicator": "arrow",
+  "workingVibeName": "hacker"
 }
