@@ -1,1 +1,2 @@
 - Always respond in Japanese.
+- When project appears to be using DDEV(like .ddev/config.yaml exists) for building development environment, always use DDEV proxy commands like ddev composer, ddev php and ddev artisan, instead of raw PHP commands.
