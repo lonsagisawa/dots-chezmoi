@@ -1,0 +1,66 @@
+{
+  "separator": "  ",
+  "contextBarStyle": "lines",
+  "components": [
+    {
+      "id": "status",
+      "enabled": false,
+      "zone": "top-left"
+    },
+    {
+      "id": "cwd",
+      "enabled": true,
+      "zone": "top-left"
+    },
+    {
+      "id": "turn",
+      "enabled": false,
+      "zone": "top-left"
+    },
+    {
+      "id": "current_tool",
+      "enabled": true,
+      "zone": "top-left"
+    },
+    {
+      "id": "git",
+      "enabled": true,
+      "zone": "top-left"
+    },
+    {
+      "id": "runtime",
+      "enabled": false,
+      "zone": "top-left"
+    },
+    {
+      "id": "cost",
+      "enabled": false,
+      "zone": "top-right"
+    },
+    {
+      "id": "model",
+      "enabled": true,
+      "zone": "bottom-left"
+    },
+    {
+      "id": "thinking",
+      "enabled": true,
+      "zone": "bottom-left"
+    },
+    {
+      "id": "tps",
+      "enabled": false,
+      "zone": "bottom-left"
+    },
+    {
+      "id": "tokens",
+      "enabled": false,
+      "zone": "bottom-right"
+    },
+    {
+      "id": "context",
+      "enabled": true,
+      "zone": "bottom-right"
+    }
+  ]
+}

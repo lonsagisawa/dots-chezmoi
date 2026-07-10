@@ -1,7 +1,7 @@
 {
-  "lastChangelogVersion": "0.80.3",
+  "lastChangelogVersion": "0.80.6",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.5",
+  "defaultModel": "gpt-5.6-luna",
   "theme": "rose-pine",
   "packages": [
     "npm:pi-mcp-adapter",
@@ -9,14 +9,15 @@
     "npm:pi-secret-guard",
     "npm:@narumitw/pi-firecrawl",
     "npm:pi-extmgr",
-    "npm:pi-working-vibe"
+    "npm:pi-working-vibe",
+    "npm:@taterdoge/pi-status"
   ],
   "hideThinkingBlock": false,
-  "defaultThinkingLevel": "medium",
+  "defaultThinkingLevel": "high",
   "degoog": {
     "url": "https://degoog.175622.xyz"
   },
   "workingVibe": true,
-  "workingIndicator": "arrow",
-  "workingVibeName": "hacker"
+  "workingIndicator": "default",
+  "workingVibeName": "pirate"
 }
