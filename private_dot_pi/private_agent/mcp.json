@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "degoog": {
+      "url": "https://degoog-mcp.175622.xyz/mcp",
+      "transport": "http",
+      "directTools": true
+    }
+  }
+}
